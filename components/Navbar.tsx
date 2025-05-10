@@ -1,12 +1,17 @@
 'use client'
 
 import { Menu } from 'lucide-react'
-import { Bell, Settings, Search } from 'lucide-react'
+import { Bell, Settings, Search, ChevronDown } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
+
+  const pathname = usePathname()
+  const isConnectPage = pathname === '/connect'
+
   return (
     <header className="w-full h-16 px-4 flex items-center justify-between bg-black text-white">
       
@@ -32,15 +37,33 @@ const Navbar = () => {
 
       {/* Sağ taraf */}
       <div className="flex items-center gap-2">
-        <div className='cursor-pointer p-2 rounded-sm bg-neutral-800 hover:bg-neutral-700 transition-all duration-200'>
+        <div className='cursor-pointer flex items-center justify-center w-10 h-10 rounded-sm bg-neutral-800 hover:bg-neutral-700 transition-all duration-200'>
           <Bell className="w-5 h-5" />
         </div>
-        <div className='cursor-pointer p-2 rounded-sm bg-neutral-800 hover:bg-neutral-700 transition-all duration-200'>
+        <div className='cursor-pointer flex items-center justify-center w-10 h-10 rounded-sm bg-neutral-800 hover:bg-neutral-700 transition-all duration-200'>
           <Settings className="w-5 h-5" />
         </div>
-        <Button className="bg-blue-600 text-white hover:bg-blue-500 transition-all duration-200 text-sm px-4 py-2">
-          Connect/Sign in
-        </Button>
+        
+        {isConnectPage ? (
+          <div className='flex items-center gap-3 bg-neutral-800 p-2 rounded-sm max-h-10'>
+
+            <div className='flex items-center gap-2'>
+              <Image src="/design.png" alt="Profile" width={24} height={24} className="rounded-full" />
+
+              <span>@patara.sui</span>
+            </div>
+
+            <ChevronDown />
+
+          </div>
+        ) : (
+          <a href="/connect">
+            <Button className="bg-blue-600 text-white hover:bg-blue-500 transition-all duration-200 text-sm px-4 py-2">
+              Connect/Sign in
+            </Button>
+          </a>
+        )}
+
       </div>
     </header>
   )
