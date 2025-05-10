@@ -4,6 +4,8 @@ import { Menu } from 'lucide-react'
 import { Bell, Settings, Search, ChevronDown } from 'lucide-react'
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
@@ -48,7 +50,11 @@ const Navbar = () => {
           <div className='flex items-center gap-3 bg-neutral-800 p-2 rounded-sm max-h-10'>
 
             <div className='flex items-center gap-2'>
-              <Image src="/design.png" alt="Profile" width={24} height={24} className="rounded-full" />
+            <Avatar>
+              <AvatarImage src="design.png" alt='avatarNavbar'/>
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+
 
               <span>@patara.sui</span>
             </div>
