@@ -18,11 +18,11 @@ const Navbar = () => {
     <header className="w-full h-16 px-4 flex items-center justify-between bg-black text-white">
       
       {/* Sol taraf */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4"> 
         <Menu className="w-6 h-6" />
-        <div className="relative w-36 h-9">
+        <a href='/' className="relative w-36 h-9">
           <Image src="/logo.png" alt="Patara Logo" fill/>
-        </div>
+        </a>
       </div>
 
       {/* Orta arama alanı */}
