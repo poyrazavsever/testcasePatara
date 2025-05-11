@@ -29,7 +29,7 @@ const data = Array.from({ length: 10 }).map(() => ({
 
 export default function EarningsPage() {
   return (
-    <section className="bg-[#0d0d0d] min-h-screen text-white px-6 py-8">
+    <section className="bg-[#0d0d0d] min-h-screen text-white">
         
         <div className="flex items-center justify-between mb-4">
         <h1 className="text-3xl font-semibold">Earnings</h1>

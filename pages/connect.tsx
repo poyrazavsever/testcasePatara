@@ -8,10 +8,10 @@ const connect = () => {
   return (
     <div className='px-4'>
 
-        <div className='flex items-center justify-between'>
+        <div className='flex items-center justify-between gap-8 mb-16'>
 
             {/* Sol taraf */}
-            <div className='flex items-start w-fit gap-12 mt-10 bg-[#181818] rounded-2xl min-h-[400px]'>
+            <div className='flex items-start w-2/3 gap-12 mt-10 bg-[#181818] rounded-2xl min-h-[400px]'>
 
                 <div className='flex flex-col justify-between h-full min-h-[370px] p-8 rounded-lg'>
 
@@ -20,11 +20,11 @@ const connect = () => {
                         <p className='text-neutral-600'>Invite your friends to Patara and earn a share of their on-chain rewards forever!</p>
                     </div>
 
-                    <div className='flex flex-col gap-4'>  
+                    <div className='flex flex-col gap-4 min-w-full'>  
 
-                        <div className='w-full p-4 bg-[#282828] rounded-lg'>
+                        <div className='p-4 bg-[#282828] rounded-lg w-full'>
                             <p className='text-sm text-neutral-500 mb-2'>Your Referral Link</p>
-                            <p className='font-medium text-neutral-300 font-mono break-all'>
+                            <p className='font-medium text-neutral-300 font-mono'>
                                 0x0e0Fcb520F76f3eAC0Aa764De4B97C53Eb366158
                             </p>
                         </div>
@@ -50,7 +50,7 @@ const connect = () => {
             </div>
 
             {/* Sağ taraf */}
-            <div className='flex flex-col justify-between gap-4 mt-10 min-h-[400px]'>
+            <div className='flex flex-col justify-between gap-4 mt-10 min-h-[400px] w-1/3'>
                 {/* Total Earned Fee Card */}
                 <div className='bg-[#181818] p-4 rounded-xl flex items-center gap-4'>
                     <div className='bg-blue-500/10 p-3 rounded-lg'>

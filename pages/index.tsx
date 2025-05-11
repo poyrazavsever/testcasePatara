@@ -45,10 +45,12 @@ export default function Home() {
           </div>
 
           {/* Button */}
-          <Button className="bg-blue-600 hover:bg-blue-700 text-sm">Connect/Sign in</Button>
+          <a href="/connect">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-sm">Connect/Sign in</Button>
+          </a>
         </div>
         
-      </div>
+      </div>  
 
     </main>
 
