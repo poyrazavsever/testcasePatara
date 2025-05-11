@@ -115,10 +115,10 @@ export default function EarningsPage() {
                     {[1, 2, 3, "...", 7, 8, 9].map((page, idx) => (
                     <Button
                         key={idx}
-                        className={`w-9 h-9 p-0 rounded-md border border-[#2a2a2a] ${
+                        className={`w-9 h-9 p-0 rounded-md border cursor-pointer border-[#2a2a2a] ${
                             page === 1
                                 ? "bg-[#333] text-white"
-                                : "bg-[#1a1a1a] text-white hover:bg-[#2a2a2a]"
+                                : "bg-[#1a1a1a] text-white hover:bg-[#2a2a2a] hover:text-white"
                             }`}
                             variant="ghost"
                 >
